@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container col-8">
+    <h2>{{ room.name }}</h2>
+    <h4>Bienvenido {{ request.user }}</h4>
+    <hr>
+    <div id="boxMessage"></div>
+
+    <div id="Chat">
+        <input class="form-control" type="text" id="inputMessage">
+        <button class="btn btn-success mt-2" type="submit" id="btnMessage">Enviar</button>
+        <a class="btn btn-primary mt-2 float-end" href="{% url 'home' %}">Salir</a>
+    </div>
+</div>
+
+	<script>
+	var usuario = '{{ request.user }}'
+	</script>
+
+<script src="{% static 'js/chat.js' %}"></script>
+
+{% endblock %}
+
