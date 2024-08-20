@@ -19,7 +19,10 @@
 
 	<script>
 	var usuario = '{{ request.user }}'
+	var roomId = ' {{ room.id }} '
 	</script>
+
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"> </script>
 
 <script src="{% static 'js/chat.js' %}"></script>
 
